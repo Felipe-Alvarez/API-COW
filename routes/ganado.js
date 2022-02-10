@@ -14,7 +14,7 @@ router.get(`/ganado`, (req, res) => {
   } catch (error) {
     res.status(503),
       json({
-        status: "504",
+        status: "503",
         type: "FAILED",
         message: "Fail to connect database",
       });
@@ -44,7 +44,7 @@ router.get("/ganado/:id", (req, res) => {
   } catch (error) {
     res.status(503),
       json({
-        status: "504",
+        status: "503",
         type: "FAILED",
         message: "Fail to connect database",
       });
@@ -67,7 +67,7 @@ router.post("/ganado/agregar", (req, res) => {
     });
   } catch (error) {
     res.status(503).json({
-      status: "504",
+      status: "503",
       type: "FAILED",
       message: "Fail to connect database",
     });
@@ -93,7 +93,7 @@ router.put("/ganado/editar/:id", (req, res) => {
     );
   } catch (error) {
     res.status(503).json({
-      status: "504",
+      status: "503",
       type: "FAILED",
       message: "Fail to connect database",
     });
@@ -121,7 +121,7 @@ router.delete("/ganado/eliminar/:id", (req, res) => {
     );
   } catch (error) {
     res.status(503).json({
-      status: "504",
+      status: "503",
       type: "FAILED",
       message: "Fail to connect database",
     });
